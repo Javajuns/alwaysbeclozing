@@ -83,6 +83,15 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
+
+        Button goToHistory = (Button)findViewById(R.id.go_to_history);
+        goToHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, History.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
